@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.9.23'
+    id 'org.springframework.boot' version '3.2.4'
+    id 'org.graalvm.buildtools.native' version '0.10.1'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.2.4'
+    // https://mvnrepository.com/artifact/com.google.cloud/spring-cloud-gcp-starter-secretmanager
+    implementation group: 'com.google.cloud', name: 'spring-cloud-gcp-starter-secretmanager', version: '5.1.2'
+}
+
+graalvmNative {
+    toolchainDetection = true
+}
+
+kotlin {
+    jvmToolchain(17)
+}
