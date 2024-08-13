@@ -1,5 +1,7 @@
 # spring-cloud-gcp-starter-secretmanager silently crashed in docker
 
+issue: https://github.com/GoogleCloudPlatform/spring-cloud-gcp/issues/2782
+
 How to reproduce:
 
 ```bash
